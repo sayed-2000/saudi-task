@@ -1,11 +1,11 @@
 .home {
-  // background-color: #f9f7f8;
-  background-color: #efefef;
+  background-color: #f9f7f8;
+  // background-color: #efefef;
   width: 100%;
   min-height: calc(100vh - 80px);
+  margin-top: 80px;
 
   .content {
-    // background-color: rebeccapurple;
     width: 100%;
   }
 }
@@ -19,10 +19,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px 0 30px 0;
 
 
     h1 {
-      margin-top: 30px;
+      // margin-top: 30px;
     }
 
 
@@ -61,7 +62,6 @@
 
 
 .box .container__blog {
-  // background-color: red;
   margin-top: 30px;
   width: 80%;
   display: grid;
@@ -71,36 +71,41 @@
   .blog {
     align-items: center;
     width: 100%;
-    height: 160px;
     border-radius: 9px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 15px 5px;
+    padding: 10px 5px;
     transition: .2s ease-in;
+    cursor: pointer;
 
 
     .icon {
       color: #e1b95d;
-      margin: 5px 0;
       background-color: transparent;
-      font-size: 30px;
-      width: 60px;
-      height: 60px;
+      font-size: 35px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: .2s ease-in;
+      transition: .3s ease-in;
     }
     p {
       color: #837d7d;
-      margin-top: 10px;
+      margin-top: 5px;
+      transition: .2s ease-in;
     }
   }
 
   .blog:hover {
-    background-color: #bea680;
+    // background-color: #bea680;
+    // background: rgb(218,189,125);
+    // background: linear-gradient(164deg, rgba(218,189,125,1) 1%, rgba(208,182,123,1) 26%, rgba(245,208,153,1) 51%, rgba(163,144,104,1) 86%);
+    
+    background: rgb(246,208,126);
+    background: radial-gradient(circle, rgba(246,208,126,0.9051995798319328) 1%, rgba(224,173,56,0.8799894957983193) 26%, rgba(214,148,49,0.896796218487395) 51%, rgba(167,128,45,0.9136029411764706) 86%);
     color: #ffffff;
   }
 
@@ -109,14 +114,24 @@
   }
 
   .blog:hover.blog .icon {
-    background-color: #a78849;
+    // background-color: #a78849;
+    background: rgb(227,177,70);
+    background: radial-gradient(circle, rgba(227,177,70,1) 1%, rgba(195,142,20,1) 26%, rgba(198,126,18,1) 51%, rgba(181,133,32,1) 86%);
     color: #ffffff;
   }
 }
 
-
+@media (max-width:860px) {
+  .box .container__blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width:690px) {
+  .home {
+    margin-top: 50px;
+  }
+
   .content {
     .box {
       width: 95%;
@@ -128,11 +143,11 @@
 }
 
 
-@media (max-width:590px) {
-  .box .container__blog {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+// @media (max-width:590px) {
+//   .box .container__blog {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
 
 
 @media (max-width:450px) {

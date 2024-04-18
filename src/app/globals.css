@@ -63,9 +63,59 @@ a {
 }
 
 
+.WhoAreWe {
+    margin-top: 80px;
+  background-color: #f9f9f9;
+  color: #000;
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: relative;
+}
+
+.WhoAreWe .box {
+  background-color: #e2e3e1cc;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.WhoAreWe .box  h1 {
+  color: #252525;
+}
+
+
+
+
 
 @media (max-width:600px) {
   .popup .message {
     width: 80%;
+  }
+}
+
+
+@media (max-width:690px) {
+
+  .WhoAreWe {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+  }
+
+  .WhoAreWe .box {
+    width: 90%;
+  }
+
+  .WhoAreWe .box h1 {
+    text-align: center;
   }
 }

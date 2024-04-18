@@ -2,11 +2,10 @@
 
 import Image from 'next/image'
 import styles from './page.module.scss'
-import Navbar from '@/Components/Navbar/Navbar'
 import { CiSliderHorizontal } from "react-icons/ci";
-import { BiSearch,BiSolidBookAlt } from "react-icons/bi";
+import { BiSearch,} from "react-icons/bi";
 import data from '../../src/app/api/store/data';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -16,18 +15,14 @@ export default function Home() {
 
   const [popup, setPopup] = useState(false);
 
-  const action = () => {
-    console.log("ssdee");
-  }
 
   const togglePopup = () => {
     setPopup(!popup)
   }
 
-
+  
   return (
     <>
-      <Navbar/>
     <div className={styles.home} >
        <div className={styles.content}>
          <div className={styles.box}>
@@ -43,7 +38,7 @@ export default function Home() {
                   data.map((item,index) => (
                     <div className={styles.blog} key={index}>
                       <div className={styles.icon}>
-                        <span><BiSolidBookAlt/></span>
+                        <span>{item.icon}</span>
                       </div>
                       <h3>{item.title}</h3>
                       <p>{item.dis}</p>
